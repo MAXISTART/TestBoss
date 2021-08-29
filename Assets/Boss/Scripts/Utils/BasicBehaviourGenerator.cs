@@ -11,6 +11,17 @@ using BehaviorDesigner.Runtime.Tasks;
 
 // 代码参考自 https://www.cnblogs.com/chenxizhang/archive/2008/07/09/1238572.html
 //            https://docs.microsoft.com/zh-cn/dotnet/framework/reflection-and-codedom/how-to-create-a-class-using-codedom
+
+/// <summary>
+/// 注意事项：
+/// 1. Condition的方法必须在那边声明带“Condition_”这样的前缀，其余返回TaskStatus的都归为Action类
+/// 2. 每次生成前点一下init键，生成路径会输出在Console中
+/// 使用方法：
+/// 1. 面向实体编程，将行为树的所有Aciton和Conditional回调到一个实体中，通过实体去控制（行为树中的变量不好操控）
+/// 2. 点击生成即可。
+/// </summary>
+
+
 public class BasicBehaviourGenerator : MonoBehaviour
 {
 
