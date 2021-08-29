@@ -184,13 +184,11 @@ namespace SnakeBoss {
         }
 
 
-
-
         #endregion
 
         #region BossCondition
 
-        public TaskStatus GetHurt()
+        public TaskStatus Condition_GetHurt()
         {
             Debug.Log("boss get hurt");
             return TaskStatus.Success;
@@ -200,7 +198,7 @@ namespace SnakeBoss {
         /// </summary>
         /// <param name="val">受击次数阈值</param>
         /// <returns></returns>
-        public TaskStatus C1_gte(int val)
+        public TaskStatus Condition_C1_gte(int val)
         {
             Debug.Log($"boss C1_gte {val}");
             return TaskStatus.Success;
@@ -210,7 +208,7 @@ namespace SnakeBoss {
         /// </summary>
         /// <param name="val">受到的伤害的阈值</param>
         /// <returns></returns>
-        public TaskStatus C2_gte(int val)
+        public TaskStatus Condition_C2_gte(int val)
         {
             Debug.Log($"boss C2_gte {val}");
             return TaskStatus.Success;
@@ -220,7 +218,7 @@ namespace SnakeBoss {
         /// </summary>
         /// <param name="val">受到的伤害的阈值</param>
         /// <returns></returns>
-        public TaskStatus C2_gt(int val)
+        public TaskStatus Condition_C2_gt(int val)
         {
             Debug.Log($"boss C2_gt {val}");
             return TaskStatus.Success;
@@ -230,7 +228,7 @@ namespace SnakeBoss {
         /// </summary>
         /// <param name="val">受到的伤害的阈值</param>
         /// <returns></returns>
-        public TaskStatus C2_lse(int val)
+        public TaskStatus Condition_C2_lse(int val)
         {
             Debug.Log($"boss C2_lse {val}");
             return TaskStatus.Success;
@@ -240,7 +238,7 @@ namespace SnakeBoss {
         /// </summary>
         /// <param name="val">受到的伤害的阈值</param>
         /// <returns></returns>
-        public TaskStatus C2_ls(int val)
+        public TaskStatus Condition_C2_ls(int val)
         {
             Debug.Log($"boss C2_ls {val}");
             return TaskStatus.Success;
@@ -250,7 +248,7 @@ namespace SnakeBoss {
         /// </summary>
         /// <param name="val">受到的伤害的阈值</param>
         /// <returns></returns>
-        public TaskStatus C2_eq(int val)
+        public TaskStatus Condition_C2_eq(int val)
         {
             Debug.Log($"boss C2_eq {val}");
             return TaskStatus.Success;

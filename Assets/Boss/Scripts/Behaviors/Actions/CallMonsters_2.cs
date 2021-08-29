@@ -16,7 +16,7 @@ namespace SnakeBoss
     
     
     [TaskCategory("SnakeBoss")]
-    public class FlyUp : Action
+    public class CallMonsters_2 : Action
     {
         
         public SharedTransform snakebossTF;
@@ -27,7 +27,7 @@ namespace SnakeBoss
         
         public override TaskStatus OnUpdate()
         {
-            return snakebossTF.Value.GetComponent<SnakeBoss> ().FlyUp();
+            return snakebossTF.Value.GetComponent<SnakeBoss> ().CallMonsters_2();
         }
     }
 }

@@ -16,10 +16,12 @@ namespace SnakeBoss
     
     
     [TaskCategory("SnakeBoss")]
-    public class FlyUp : Action
+    public class Condition_C2_lse : Conditional
     {
         
         public SharedTransform snakebossTF;
+        
+        public int val;
         
         public override void OnAwake()
         {
@@ -27,7 +29,7 @@ namespace SnakeBoss
         
         public override TaskStatus OnUpdate()
         {
-            return snakebossTF.Value.GetComponent<SnakeBoss> ().FlyUp();
+            return snakebossTF.Value.GetComponent<SnakeBoss> ().Condition_C2_lse(val);
         }
     }
 }

@@ -16,10 +16,12 @@ namespace SnakeBoss
     
     
     [TaskCategory("SnakeBoss")]
-    public class FlyUp : Action
+    public class IdleForSeconds : Action
     {
         
         public SharedTransform snakebossTF;
+        
+        public float seconds;
         
         public override void OnAwake()
         {
@@ -27,7 +29,7 @@ namespace SnakeBoss
         
         public override TaskStatus OnUpdate()
         {
-            return snakebossTF.Value.GetComponent<SnakeBoss> ().FlyUp();
+            return snakebossTF.Value.GetComponent<SnakeBoss> ().IdleForSeconds(seconds);
         }
     }
 }

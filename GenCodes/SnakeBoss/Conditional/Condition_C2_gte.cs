@@ -16,10 +16,12 @@ namespace SnakeBoss
     
     
     [TaskCategory("SnakeBoss")]
-    public class ShootBullet_B : Action
+    public class Condition_C2_gte : Conditional
     {
         
-        public SharedTransform snakeBossTF;
+        public SharedTransform snakebossTF;
+        
+        public int val;
         
         public override void OnAwake()
         {
@@ -27,7 +29,7 @@ namespace SnakeBoss
         
         public override TaskStatus OnUpdate()
         {
-            return snakeBossTF.Value.GetComponent<SnakeBoss>().ShootBullet_B();
+            return snakebossTF.Value.GetComponent<SnakeBoss> ().Condition_C2_gte(val);
         }
     }
 }
