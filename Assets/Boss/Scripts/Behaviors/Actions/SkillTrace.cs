@@ -12,15 +12,13 @@ namespace SnakeBoss
         public Sequence[] Traces;
 
         private SnakeBoss boss;
-
         public override void OnAwake()
         {
-            boss = snakeBossTF.Value.GetComponent<SnakeBoss>();
         }
 
         public override TaskStatus OnUpdate()
         {
-            return boss.SkillTrace(Traces);
+            return snakeBossTF.Value.GetComponent<SnakeBoss>().SkillTrace(Traces);
         }
     }
 }

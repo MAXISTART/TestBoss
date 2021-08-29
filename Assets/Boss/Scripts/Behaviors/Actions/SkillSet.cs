@@ -15,12 +15,11 @@ namespace SnakeBoss
 
         public override void OnAwake()
         {
-            boss = snakeBossTF.Value.GetComponent<SnakeBoss>();
         }
 
         public override TaskStatus OnUpdate()
         {
-            return boss.SkillSet(Sets);
+            return snakeBossTF.Value.GetComponent<SnakeBoss>().SkillSet(Sets);
         }
     }
 }
